@@ -1,0 +1,58 @@
+﻿@model ProjetoAvonaleWeb.Models.Repo
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes do repositório</h2>
+<form class="navbar-form" action="SalvarFavorito">
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Favorito</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Linguagem</th>
+                    <th scope="col">Última atualização</th>
+                    <th scope="col">Dono</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    <tr>
+                        <td>
+                            @if (Model.favorito)
+                            {
+                                <label><input type="checkbox" value="true" checked name="novoFavorito"></label>
+                            }
+                            else
+                            {
+                                <label><input type="checkbox" value="true" name="novoFavorito"></label>
+                            }
+                        </td>
+                        <td>
+                            @Html.ActionLink(Model.name, "Detalhes", "Repositorios", new { filtro = Model.name }, null)
+                        </td>
+                        <td>
+                            @Model.description
+                        </td>
+                        <td>
+                            @Model.language
+                        </td>
+                        <td>
+                            @Model.updated_at
+                        </td>
+                        <td>
+                            @Model.owner.login
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <input type="hidden" value="@Model.name" name="nome" />
+        <button type="submit" class="btn btn-success">Salvar</button>
+    </div>
+</form>
+
