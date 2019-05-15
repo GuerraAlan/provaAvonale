@@ -9,7 +9,7 @@ namespace ProjetoAvonaleWeb
 {
     public class RepoCache
     {
-        private static List<Repo> repositorios;
+        public static List<Repo> repositorios;
 
         public static List<Repo> getRepositorios()
         {

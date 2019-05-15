@@ -164,10 +164,10 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Repositorios\ListaFavoritos.cshtml" />
-    <Content Include="Views\Repositorios\Index.cshtml" />
-    <Content Include="Views\Repositorios\Detalhar.cshtml" />
-    <Content Include="Views\Repositorios\Buscar.cshtml" />
+    <Content Include="Views\Repos\ListaFavoritos.cshtml" />
+    <Content Include="Views\Repos\Index.cshtml" />
+    <Content Include="Views\Repos\Detalhar.cshtml" />
+    <Content Include="Views\Repos\Buscar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

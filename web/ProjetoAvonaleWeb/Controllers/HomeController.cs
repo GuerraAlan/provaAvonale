@@ -12,7 +12,7 @@ namespace ProjetoAvonaleWeb.Controllers
     {
         public ActionResult Index()
         {
-            return View(RepoCache.getRepositorios());
+            return View(RepoCache.repositorios);
         }
 
     }

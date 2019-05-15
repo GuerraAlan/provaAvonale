@@ -80,3 +80,4 @@ C:\Users\Alan\avonale\web\ProjetoAvonaleWeb\obj\Debug\ProjetoAvonaleWeb.csproj.C
 C:\Users\Alan\avonale\web\ProjetoAvonaleWeb\obj\Debug\ProjetoAvonaleWeb.csproj.CopyComplete
 C:\Users\Alan\avonale\web\ProjetoAvonaleWeb\obj\Debug\ProjetoAvonaleWeb.dll
 C:\Users\Alan\avonale\web\ProjetoAvonaleWeb\obj\Debug\ProjetoAvonaleWeb.pdb
+C:\Users\Alan\avonale\web\ProjetoAvonaleWeb\obj\Debug\ProjetoAvonaleWeb.csprojAssemblyReference.cache
