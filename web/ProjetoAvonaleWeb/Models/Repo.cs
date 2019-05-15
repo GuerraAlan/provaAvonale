@@ -5,12 +5,13 @@ using System.Web;
 
 namespace ProjetoAvonaleWeb.Models
 {
+    [Serializable]
     public class Repo
     {
        
         public string name { get; set; }
 
-        public Owner owner { get; set; }
+        public User owner { get; set; }
 
         public string description { get; set; }
 
@@ -19,9 +20,12 @@ namespace ProjetoAvonaleWeb.Models
         public DateTime updated_at { get; set; }
 
         public bool favorito { get; set; }
+
+        public List<User> contributors { get; set; }
     }
-    public class Owner
+    public class User
     {
         public string login { get; set; }
     }
+
 }

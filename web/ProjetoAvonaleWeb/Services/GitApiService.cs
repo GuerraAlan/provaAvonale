@@ -11,9 +11,10 @@ namespace ProjetoAvonaleWeb.Services
 {
     public class GitApiService
     {
+        const string USER = "Skellbr";
         public string BaseUrl
         {
-            get {return "https://api.github.com/users/Skellbr/repos";}
+            get {return "https://api.github.com/users/" + USER + "/repos";}
         }
 
         public List<Repo> getRepos()
@@ -38,6 +39,27 @@ namespace ProjetoAvonaleWeb.Services
                 return jsonObj;
             }
             return jsonObj;
+        }
+
+        public void getContributors(Repo repo)
+        {
+            HttpWebRequest httpWebRequest = WebRequest.Create("https://api.github.com/repos/"+ USER + "/" + repo.name + "/contributors") as HttpWebRequest;
+
+            httpWebRequest.Method = WebRequestMethods.Http.Get;
+            httpWebRequest.UserAgent = "Anything";
+
+            try
+            {
+                using (StreamReader responseReader = new StreamReader(
+                    httpWebRequest.GetResponse().GetResponseStream()))
+                {
+                    repo.contributors = JsonConvert.DeserializeObject<List<User>>(responseReader.ReadToEnd());
+                }
+            }
+            catch {}
+            
+
+
         }
     }
 }

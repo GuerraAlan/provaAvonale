@@ -1,7 +1,13 @@
 ﻿@model IEnumerable<ProjetoAvonaleWeb.Models.Repo>
 
-<h2>Repositórios</h2>
+<h2>Meus Repositórios</h2>
 
+<div class="form-group input-group">
+    <form class="navbar-form">
+        <input class="form-control" name="filtro" />
+        <input class="btn btn-outline-dark" type="submit" id="btn_procura" value="Filtrar" />
+    </form>
+</div>
 <div class="container">
     <table class="table table-striped">
         <thead>

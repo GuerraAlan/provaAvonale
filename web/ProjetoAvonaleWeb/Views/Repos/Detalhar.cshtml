@@ -33,7 +33,7 @@
                             }
                         </td>
                         <td>
-                            @Html.ActionLink(Model.name, "Detalhes", "Repos", new { filtro = Model.name }, null)
+                            @Model.name
                         </td>
                         <td>
                             @Model.description
@@ -51,6 +51,29 @@
                 }
             </tbody>
         </table>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Contribuidores</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    foreach (var item in Model.contributors)
+                    {
+                        <tr>
+                            <td>
+                               @item.login
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+
         <input type="hidden" value="@Model.name" name="nome" />
         <button type="submit" class="btn btn-success">Salvar</button>
     </div>
