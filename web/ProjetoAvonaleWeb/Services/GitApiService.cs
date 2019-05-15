@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Net;
 using ProjetoAvonaleWeb.Models;
 using Newtonsoft.Json;
@@ -11,15 +8,16 @@ namespace ProjetoAvonaleWeb.Services
 {
     public class GitApiService
     {
+        //Define usuário a ser buscado no github
         const string USER = "Skellbr";
-        public string BaseUrl
-        {
-            get {return "https://api.github.com/users/" + USER + "/repos";}
-        }
 
+        /// <summary>
+        /// Obtem a lista de repositorios do usuario acima
+        /// </summary>
+        /// <returns></returns>
         public List<Repo> getRepos()
         {
-            HttpWebRequest httpWebRequest = WebRequest.Create(BaseUrl) as HttpWebRequest;
+            HttpWebRequest httpWebRequest = WebRequest.Create("https://api.github.com/users/" + USER + "/repos") as HttpWebRequest;
 
             httpWebRequest.Method = WebRequestMethods.Http.Get;
             httpWebRequest.UserAgent = "Anything";
@@ -41,9 +39,13 @@ namespace ProjetoAvonaleWeb.Services
             return jsonObj;
         }
 
+        /// <summary>
+        /// Obtem a lista dos contribuidores do repositório informado
+        /// </summary>
+        /// <param name="repo"></param>
         public void getContributors(Repo repo)
         {
-            HttpWebRequest httpWebRequest = WebRequest.Create("https://api.github.com/repos/"+ USER + "/" + repo.name + "/contributors") as HttpWebRequest;
+            HttpWebRequest httpWebRequest = WebRequest.Create("https://api.github.com/repos/" + USER + "/" + repo.name + "/contributors") as HttpWebRequest;
 
             httpWebRequest.Method = WebRequestMethods.Http.Get;
             httpWebRequest.UserAgent = "Anything";
@@ -56,8 +58,8 @@ namespace ProjetoAvonaleWeb.Services
                     repo.contributors = JsonConvert.DeserializeObject<List<User>>(responseReader.ReadToEnd());
                 }
             }
-            catch {}
-            
+            catch { }
+
 
 
         }

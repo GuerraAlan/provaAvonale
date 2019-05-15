@@ -8,7 +8,7 @@ namespace ProjetoAvonaleWeb.Models
     [Serializable]
     public class Repo
     {
-       
+
         public string name { get; set; }
 
         public User owner { get; set; }
