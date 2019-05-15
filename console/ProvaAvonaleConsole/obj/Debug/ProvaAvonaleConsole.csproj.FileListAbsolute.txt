@@ -1,0 +1,7 @@
+C:\Users\Alan\avonale\console\ProvaAvonaleConsole\bin\Debug\ProvaAvonaleConsole.exe.config
+C:\Users\Alan\avonale\console\ProvaAvonaleConsole\bin\Debug\ProvaAvonaleConsole.exe
+C:\Users\Alan\avonale\console\ProvaAvonaleConsole\bin\Debug\ProvaAvonaleConsole.pdb
+C:\Users\Alan\avonale\console\ProvaAvonaleConsole\obj\Debug\ProvaAvonaleConsole.csprojAssemblyReference.cache
+C:\Users\Alan\avonale\console\ProvaAvonaleConsole\obj\Debug\ProvaAvonaleConsole.csproj.CoreCompileInputs.cache
+C:\Users\Alan\avonale\console\ProvaAvonaleConsole\obj\Debug\ProvaAvonaleConsole.exe
+C:\Users\Alan\avonale\console\ProvaAvonaleConsole\obj\Debug\ProvaAvonaleConsole.pdb
